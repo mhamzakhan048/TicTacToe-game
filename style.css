@@ -1,0 +1,168 @@
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  .grad{
+background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+    }
+@keyframes gradient {
+0% {
+background-position: 0% 50%;
+}
+50% {
+background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+  
+  
+  html {
+      
+    /* background-color: green; */
+    color: black;
+    font-family: 'Roboto', sans-serif;;
+    font-size: 62.5%;
+    line-height: 1.6;
+  }
+  
+  body {
+      
+    font-size: 1.6rem;
+  }
+  
+  header {
+    font-size: 2.4rem;
+  }
+  
+  h1 {
+    line-height: 1.2;
+  }
+  
+  button {
+    color: inherit;
+    font-family: 'Roboto', sans-serif;
+    font-size: inherit;
+    cursor: pointer;
+  }
+  
+  .header {
+    border-bottom: 3px solid var(--blue-border-color);
+    padding: 5rem;
+    background-color: var(--header-background-color);
+    color: var(--header-font-color);
+  }
+  
+  h1 {
+    font-size: 60px;
+  }
+  
+  .message {
+    padding: -20px;
+    font-size: 5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+  }
+  
+  /* .main {
+    padding: 0 8rem;
+  } */
+  
+  .gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 454px;
+    height: 454px;
+    border: 1px solid #555;
+    margin: 0px auto;
+  }
+  
+  .field {
+    width: 150px;
+    height: 150px;
+    border: 1px solid grey;
+    font-size: 10rem;
+    cursor: pointer;
+    user-select: none;
+    background-color:black;
+    border-radius:100%;
+    opacity:.2;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+  }
+  
+  .field:hover {
+    border: 2px #ee6d4d9c solid;
+    opacity:0.5;
+  }
+  
+  .center {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .restart-button {
+    padding: 10px 20px;
+    border: 4px solid lightgray;
+    border-radius: 20px;
+    background-color:transparent;
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+  }
+  
+  .restart-button:hover {
+    background: rgba(231, 231, 231, 0.603);
+    color: rgb(36, 48, 85);
+    border: 4px #ee6d4d9c solid;
+    opacity: 8;
+  }
+  
+  .restart-button:active {
+    background-color: darkgray;
+  }
+  
+  .restart-button:focus {
+    outline: none;
+  }
+  
+  @media (max-width: 660px) {
+    html {
+      font-size: 41%;
+    }
+  
+    .gameboard {
+      width: 304px;
+      height: 304px;
+    }
+  
+    .field {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    html {
+      font-size: 29%;
+    }
+  
+    .gameboard {
+      width: 214px;
+      height: 214px;
+    }
+  
+    .field {
+      width: 70px;
+      height: 70px;
+    }
+  }
